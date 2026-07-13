@@ -12,8 +12,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
         }
         .card {
             background: #1e293b;
@@ -22,8 +24,9 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             text-align: center;
             max-width: 400px;
-            width: 90%;
+            width: 100%;
             border: 1px solid #334155;
+            box-sizing: border-box;
         }
         h1 {
             font-size: 24px;
@@ -39,8 +42,8 @@
             display: block;
             background: #0284c7;
             color: white;
-            padding: 12px;
-            margin: 10px 0;
+            padding: 14px;
+            margin: 12px 0;
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
@@ -49,6 +52,7 @@
             border: none;
             width: 100%;
             font-size: 16px;
+            box-sizing: border-box;
         }
         .btn:hover {
             background: #0369a1;
@@ -62,7 +66,7 @@
             background: #475569;
         }
         .footer {
-            margin-top: 20px;
+            margin-top: 25px;
             font-size: 12px;
             color: #64748b;
         }
@@ -74,11 +78,8 @@
     <h1>QUANG BẮC PRO 2</h1>
     <p>Hệ thống cung cấp file cấu hình chất lượng cao và cập nhật liên tục.</p>
     
-    <!-- NÚT 1: BẤM PHÁT TẢI FILE LUÔN -->
-    <!-- Thay "config.txt" bằng tên file config của bạn -->
-    <a href="config.txt" download class="btn">TẢI FILE CONFIG (.TXT)</a>
+    <a href="SANG2027.mobileconfig" download class="btn">TẢI FILE CONFIG</a>
 
-    <!-- NÚT 2: SAO CHÉP LIÊN KẾT CONFIG -->
     <button class="btn btn-secondary" onclick="copyLink()">SAO CHÉP LINK CONFIG</button>
 
     <div class="footer">© 2026 Quang Bắc Pro. All rights reserved.</div>
@@ -86,8 +87,7 @@
 
 <script>
     function copyLink() {
-        // Thay link bên dưới bằng link file config thật của bạn sau khi úp lên github
-        const linkConfig = window.location.href + "config.txt"; 
+        const linkConfig = window.location.href + "SANG2027.mobileconfig"; 
         navigator.clipboard.writeText(linkConfig).then(() => {
             alert("Đã sao chép đường dẫn file config vào bộ nhớ tạm!");
         }).catch(err => {
@@ -97,3 +97,4 @@
 </script>
 
 </body>
+</html>
