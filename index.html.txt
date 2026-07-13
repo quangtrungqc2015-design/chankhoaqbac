@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển Cấu Hình</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid #334155;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+        p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .btn {
+            display: block;
+            background: #0284c7;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #0369a1;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: #334155;
+            color: #cbd5e1;
+        }
+        .btn-secondary:hover {
+            background: #475569;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>QUANG BẮC PRO 2</h1>
+    <p>Hệ thống cung cấp file cấu hình chất lượng cao và cập nhật liên tục.</p>
+    
+    <!-- NÚT 1: BẤM PHÁT TẢI FILE LUÔN -->
+    <!-- Thay "config.txt" bằng tên file config của bạn -->
+    <a href="config.txt" download class="btn">TẢI FILE CONFIG (.TXT)</a>
+
+    <!-- NÚT 2: SAO CHÉP LIÊN KẾT CONFIG -->
+    <button class="btn btn-secondary" onclick="copyLink()">SAO CHÉP LINK CONFIG</button>
+
+    <div class="footer">© 2026 Quang Bắc Pro. All rights reserved.</div>
+</div>
+
+<script>
+    function copyLink() {
+        // Thay link bên dưới bằng link file config thật của bạn sau khi úp lên github
+        const linkConfig = window.location.href + "config.txt"; 
+        navigator.clipboard.writeText(linkConfig).then(() => {
+            alert("Đã sao chép đường dẫn file config vào bộ nhớ tạm!");
+        }).catch(err => {
+            alert("Lỗi khi sao chép: " + err);
+        });
+    }
+</script>
+
+</body>
